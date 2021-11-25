@@ -2,7 +2,7 @@
 	"name": "Monaco Component",
 	"scripts": {
 		"clean": "rm -rf ./dist/monaco",
-		"build": "npm run clean && node ./build.js --minify"
+		"build": "npm run clean && node ./build.js"
 	},
 	"devDependencies": {
 		"esbuild": "^0.13.15"
