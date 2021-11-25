@@ -1,0 +1,4 @@
+dist/**/*.js
+dist/**/*.ttf
+dist/**/*.css
+node_modules
