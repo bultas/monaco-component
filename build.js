@@ -9,6 +9,8 @@ const workerEntryPoints = [
   "vs/editor/editor.worker.js",
 ];
 
+const outdir = path.join(__dirname, "dist", "monaco");
+
 build({
   entryPoints: workerEntryPoints.map(
     (entry) => `./node_modules/monaco-editor/esm/${entry}`
@@ -16,14 +18,14 @@ build({
   bundle: true,
   format: "iife",
   outbase: "./node_modules/monaco-editor/esm/",
-  outdir: path.join(__dirname, "dist", "monaco"),
+  outdir: outdir,
 });
 
 build({
   entryPoints: ["index.js"],
   bundle: true,
   format: "iife",
-  outdir: path.join(__dirname, "dist", "monaco"),
+  outdir: outdir,
   loader: {
     ".ttf": "file",
   },
