@@ -1,0 +1,13 @@
+{
+	"name": "Monaco Component",
+	"scripts": {
+		"clean": "rm -rf ./dist/monaco",
+		"build": "npm run clean && node ./build.js"
+	},
+	"devDependencies": {
+		"esbuild": "^0.13.15"
+	},
+	"dependencies": {
+		"monaco-editor": "^0.30.1"
+	}
+}
