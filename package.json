@@ -1,5 +1,5 @@
 {
-	"name": "Monaco Component",
+	"name": "monaco-component",
 	"scripts": {
 		"clean": "rm -rf ./dist/monaco",
 		"build": "npm run clean && node ./build.js"
