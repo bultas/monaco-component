@@ -19,7 +19,7 @@ Will create dist files of Editor in `/dist` folder
 ## Usage
 Just import final bundle (from "/dist") as ES Module in your project.. 
 
-```
+```html
 <script type="module">
   import {editor} from "./monaco/index.js";
 
