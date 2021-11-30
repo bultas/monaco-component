@@ -15,3 +15,20 @@ Build it outside of you project.
 
 ### `npm run build` 
 Will create dist files of Editor in `/dist` folder
+
+### Usage
+Just import final bundle (from "/dist") as ES Module in your project.. 
+
+```
+<script type="module">
+  import {editor} from "./monaco/index.js";
+
+  editor.create(document.getElementById("container"), {
+    value: ["function x() {", '\tconsole.log("Hello world!");', "}"].join("\n"),
+    language: "javascript",
+    minimap: {
+      enabled: false,
+    },
+  });
+</script>
+```
