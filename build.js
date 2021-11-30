@@ -1,31 +1,32 @@
 const esbuild = require("esbuild");
 const path = require("path");
 
-const workerEntryPoints = [
-  "vs/language/json/json.worker.js",
-  "vs/language/css/css.worker.js",
-  "vs/language/html/html.worker.js",
-  "vs/language/typescript/ts.worker.js",
-  "vs/editor/editor.worker.js",
-];
-
 const outdir = path.join(__dirname, "dist", "monaco");
 
-build({
-  entryPoints: workerEntryPoints.map(
-    (entry) => `./node_modules/monaco-editor/esm/${entry}`
-  ),
-  bundle: true,
-  format: "iife",
-  outbase: "./node_modules/monaco-editor/esm/",
-  outdir: outdir,
-});
+// const workerEntryPoints = [
+//   "vs/language/json/json.worker.js",
+//   "vs/language/css/css.worker.js",
+//   "vs/language/html/html.worker.js",
+//   "vs/language/typescript/ts.worker.js",
+//   "vs/editor/editor.worker.js",
+// ];
+
+// build({
+//   entryPoints: workerEntryPoints.map(
+//     (entry) => `./node_modules/monaco-editor/esm/${entry}`
+//   ),
+//   bundle: true,
+//   format: "iife",
+//   outbase: "./node_modules/monaco-editor/esm/",
+//   outdir: outdir,
+// });
 
 build({
   entryPoints: ["index.js"],
   bundle: true,
-  format: "iife",
+  format: "esm",
   outdir: outdir,
+  minify: true,
   loader: {
     ".ttf": "file",
   },

@@ -7,6 +7,16 @@
 	<body>
 		<div id="container" style="width: 800px; height: 600px; border: 1px solid #ccc"></div>
 
-		<script type="module" src="./monaco/index.js"></script>
+		<script type="module">
+			import {editor} from "./monaco/index.js";
+
+			editor.create(document.getElementById("container"), {
+				value: ["function x() {", '\tconsole.log("Hello world!");', "}"].join("\n"),
+				language: "javascript",
+				minimap: {
+					enabled: false,
+				},
+			});
+		</script>
 	</body>
 </html>

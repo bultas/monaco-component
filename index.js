@@ -1,4 +1,4 @@
-import * as monaco from "monaco-editor/esm/vs/editor/editor.api.js";
+export * from "monaco-editor/esm/vs/editor/editor.api.js";
 
 // import * as monaco from "monaco-editor/esm/vs/editor/editor.main.js";
 
@@ -19,11 +19,3 @@ import * as monaco from "monaco-editor/esm/vs/editor/editor.api.js";
 //     return "./monaco/vs/editor/editor.worker.js";
 //   },
 // };
-
-monaco.editor.create(document.getElementById("container"), {
-  value: ["function x() {", '\tconsole.log("Hello world!");', "}"].join("\n"),
-  language: "javascript",
-  minimap: {
-    enabled: false,
-  },
-});
