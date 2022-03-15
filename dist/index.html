@@ -1,22 +1,12 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-		<link rel="stylesheet" href="./monaco/index.css" />
-	</head>
-	<body>
-		<div id="container" style="width: 800px; height: 600px; border: 1px solid #ccc"></div>
-
-		<script type="module">
-			import {editor} from "./monaco/index.js";
-
-			editor.create(document.getElementById("container"), {
-				value: ["function x() {", '\tconsole.log("Hello world!");', "}"].join("\n"),
-				language: "javascript",
-				minimap: {
-					enabled: false,
-				},
-			});
-		</script>
-	</body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="./monaco/index.css" />
+    <link rel="stylesheet" href="index.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <div id="editor"></div>
+  </body>
 </html>
