@@ -1,6 +1,4 @@
-Simple build of Monaco Editor
-
-https://github.com/microsoft/monaco-editor
+Simple build of [Monaco Editor](https://github.com/microsoft/monaco-editor)
 
 ## DEMO
 
